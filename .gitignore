@@ -1,4 +1,7 @@
 output/
 config.csv
+gsheets.csv
 .~*
 *.zip
+*.p12
+jobInfo.properties
