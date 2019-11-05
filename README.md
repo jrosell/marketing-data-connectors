@@ -10,12 +10,12 @@
 
 The ad_account_id format is like this one act_#####.
 
-![ad_account_id](ad_account_id.png)
+![ad_account_id](docs/ad_account_id.png)
 
 
 The access_token format is a very long string. 
 
-![access_token](access_token.png)
+![access_token](docs/access_token.png)
 
 3. Clone or download & extract this repository
 https://github.com/jrosell/marketing-data-connectors.git
@@ -30,7 +30,7 @@ $ ./run.sh
 
 6. On output/facebook_ads.csv you will have last facebook_ads_days days data. You can open it using [Libreoffice](https://www.libreoffice.org/) or any spreadsheet software.
 
-![libreoffice_csv](libreoffice_csv.png)
+![libreoffice_csv](docs/libreoffice_csv.png)
 
 
 ### Open for collaborations
@@ -49,12 +49,12 @@ El ad_account_id tiene un formato como este act_#####. El ads_access_token es un
 
 The ad_account_id format is like this one act_#####.
 
-![ad_account_id](ad_account_id.png)
+![ad_account_id](docs/ad_account_id.png)
 
 
 The access_token format is a very long string.
 
-![access_token](access_token.png)
+![access_token](docs/access_token.png)
 
 3. Clona o descarga & extrae este repositorio
 https://github.com/jrosell/marketing-data-connectors.git
@@ -69,7 +69,7 @@ $ ./run.sh
 
 6. En output/facebook_ads.csv tendrás los datos de los últimos facebook_ads_days días. Puedes abrirlo usando [Libreoffice](https://www.libreoffice.org/) o cualquier programa de hojas de cálculo.
 
-![libreoffice_csv](libreoffice_csv.png)
+![libreoffice_csv](docs/libreoffice_csv.png)
 
 ### Abierto a colaboraciones
 Puedes hacer un "pull request" o abrir casos si quieres ayudar.
