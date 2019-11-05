@@ -20,7 +20,7 @@ The access_token format is a very long string.
 3. Clone or download & extract this repository
 https://github.com/jrosell/marketing-data-connectors.git
 
-4. Copy config-sample.csv to config.csv and change facebook_ads_ad_account_id y facebook_ads_access_token with your ad_account_id and access_token.
+4. Copy config-sample.csv to config.csv & change facebook_ads_ad_account_id & facebook_ads_access_token with your ad_account_id & access_token.
 
 5. On Linux or Mac, give execution permissions to run.sh file and execute it
 
@@ -28,7 +28,9 @@ $ chmod u+x ./run.sh
 
 $ ./run.sh
 
-6. On output/facebook_ads.csv you will have last facebook_ads_days days data.
+6. On output/facebook_ads.csv you will have last facebook_ads_days days data. You can open it using [Libreoffice](https://www.libreoffice.org/) or any spreadsheet software.
+
+![libreoffice_csv](libreoffice_csv.png)
 
 
 ### Open for collaborations
@@ -57,7 +59,7 @@ The access_token format is a very long string.
 3. Clona o descarga & extrae este repositorio
 https://github.com/jrosell/marketing-data-connectors.git
 
-4. Copia config-sample.csv a config.csv y cambia los datos de facebook_ads_ad_account_id y facebook_ads_access_token con tu ad_account_id y access_token
+4. Copia config-sample.csv a config.csv & cambia los datos de facebook_ads_ad_account_id & facebook_ads_access_token con tu ad_account_id & access_token
 
 5. En Linux o Mac, da permisos de ejecución al fichero run.sh y ejecútalo:
 
@@ -65,7 +67,9 @@ $ chmod u+x ./run.sh
 
 $ ./run.sh
 
-6. En output/facebook_ads.csv tendrás los datos de los últimos facebook_ads_days días.
+6. En output/facebook_ads.csv tendrás los datos de los últimos facebook_ads_days días. Puedes abrirlo usando [Libreoffice](https://www.libreoffice.org/) o cualquier programa de hojas de cálculo.
+
+![libreoffice_csv](libreoffice_csv.png)
 
 ### Abierto a colaboraciones
 Puedes hacer un "pull request" o abrir casos si quieres ayudar.
