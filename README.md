@@ -58,7 +58,7 @@ $ ./load.sh
 
 
 ### Open for collaborations
-You can do pull resquests or open issues if you want to help.
+You can do [pull resquests](https://github.com/jrosell/marketing-data-connectors/pulls) or [open issues](https://github.com/jrosell/marketing-data-connectors/issues) if you want to help.
 
 ## Spanish
 ### Jobs de Talend para extraer datos de marketing usando Facebook Marketing API, etc
@@ -122,4 +122,4 @@ $ ./load.sh
 
 
 ### Abierto a colaboraciones
-Puedes hacer un "pull request" o abrir casos si quieres ayudar.
+Puedes hacer un (pull request)[https://github.com/jrosell/marketing-data-connectors/pulls] o [abrir casos](https://github.com/jrosell/marketing-data-connectors/issues) si quieres ayudar.
