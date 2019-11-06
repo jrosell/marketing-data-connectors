@@ -6,7 +6,7 @@
 1. Clone or download & extract this repository
 https://github.com/jrosell/marketing-data-connectors.git
 
-2. Decide what connectors you will use and uncomment run.sh what you need.
+2. Decide what connectors you will use and comment/uncomment run.sh what you need or not.
 
 - Facebook CSV: copy fb-sample.csv to fb.csv
 - Facebook CSV to Gsheets too: Copy fb-sheets-sample.csv to fb-sheets.csv

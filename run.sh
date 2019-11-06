@@ -3,7 +3,7 @@ ROOT_PATH=`pwd`
 
 # Comment/Unncomment following lines whether you use or not Facebook CSV connector
 # chmod u+x ./connectors/Facebook_CSV/Facebook_CSV_run.sh 
-# ./connectors/Facebook_CSV/Facebook_CSV_run.sh --context_param path=$ROOT_PATH
+#./connectors/Facebook_CSV/Facebook_CSV_run.sh --context_param path=$ROOT_PATH
 
 # Comment/Unncomment following lines whether you use or not Facebook CSV to Gsheets connector
 # chmod u+x ./connectors/Facebook_CSV_to_Gsheets/Facebook_CSV_to_Gsheets_run.sh 
