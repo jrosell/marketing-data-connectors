@@ -1,125 +1,106 @@
 # marketing-data-connectors
-## English
-### Talend jobs to extract marketing data using Facebook Marketing API, etc
+## Talend jobs to extract and load marketing data using Facebook Marketing API, Google Analytics, Google Sheets, etc
 
-#### Facebook Ads 
-1. Create an app or add Marketing API to an existing one: https://developers.facebook.com/apps/
+### Setup overview
 
-2. You need ad_account_id and access_token. 
-
-The ad_account_id format is like this one act_#####.
-
-![ad_account_id](docs/ad_account_id.png)
-
-
-The access_token format is a very long string. 
-
-![access_token](docs/access_token.png)
-
-3. Clone or download & extract this repository
+1. Clone or download & extract this repository
 https://github.com/jrosell/marketing-data-connectors.git
 
-4. Copy config-sample.csv to config.csv & change facebook_ads_ad_account_id & facebook_ads_access_token with your ad_account_id & access_token.
+2. Decide what connectors you will use and uncomment run.sh what you need.
 
-5. On Linux or Mac, give execution permissions to run.sh file and execute it
+- Facebook CSV: copy fb-sample.csv to fb.csv
+- Facebook CSV to Gsheets too: Copy fb-sheets-sample.csv to fb-sheets.csv
+- Google Analytics CSV: Copy fb-sample.csv to fb.csv
+- Google Analytics CSV to Gsheets too: Copy ga-sheets-sample.csv to ga-sheets.csv
 
+3. See detailed connectors setup section.
+
+4. On Linux or Mac, give execution permissions to run.sh file and execute it
+```
 $ chmod u+x ./run.sh
 
 $ ./run.sh
+```
+5. You may want to schedule it daily using cronjob. For example, at 8am every day.
+```
+$ crontab -e
 
-6. On output/facebook_ads.csv you will have last facebook_ads_days days data. You can open it using [Libreoffice](https://www.libreoffice.org/) or any spreadsheet software.
+0 8 * * * /your-absolute-path/run.sh
+```
+
+### Detailed connectors setup
+
+#### Facebook CSV
+1. Create an app or add Marketing API product to an existing one: https://developers.facebook.com/apps/
+
+2. You need to generate a access_token and you need to know your ad_account_id. 
+
+- The ad_account_id format is like this one act_#####. You can see it "act=" as a parameter on you business manager account and it will be written as "act_"
+
+![ad_account_id](docs/ad_account_id.png)
+
+- The access_token is a very long string that you get when you give read_insights permissions to your app.
+
+![access_token](docs/access_token.png)
+
+3. Open fb.csv and change at last facebook_ads_ad_account_id & facebook_ads_access_token with your ad_account_id & access_token
+- In days, set the numbers of days you want to go back from yesterday.
+- In facebook_ads_version, set the Marketing API version you want to use.
+
+4. Check execution results on output/facebook_ads.csv. You can open it using [Libreoffice](https://www.libreoffice.org/) or any spreadsheet software.
 
 ![libreoffice_csv](docs/libreoffice_csv.png)
 
 
-#### Google Spreadsheet
+#### Facebook CSV to Gsheets
 
-1. Create a service account and download its p12 file.
+0. See "Facebook CSV" connector setup first.
+
+1. If you don't currently have a service account and download its p12 file, create a service account and download its p12 file.
 - Open the Service Accounts page in the GCP Console https://console.cloud.google.com/iam-admin/serviceaccounts
 - Click Select a project, select your project and click Open.
 - Click Create Service Account and enter a service account name (friendly display name), an optional description, select a role you wish to grant to the service account, and then click Save.
-- Edit your google_service_account_email, create a key and select P12.
-- Download your google_key_file_p12 file 
+- Create a key and select P12. Download your p12 file.
+- Write down your google_service_account_email and google_key_file_p12
 
-2. Enable Google Sheets API on https://console.cloud.google.com/apis/library/sheets.googleapis.com?q=sheets
+2. Enable APIs Google Sheets API on https://console.cloud.google.com/apis/library/sheets.googleapis.com
 
-3. Create a new Google Spreadsheet and write down its file id.
-google_sheet_file_id is the file id on https://docs.google.com/spreadsheets/d/google_sheet_file_id/edit
+3. Open or create a new Google Spreadsheet and write down its file id.
+- You can see google_sheet_file_id on URL https://docs.google.com/spreadsheets/d/google_sheet_file_id/edit
+- Add google_service_account_email user with edit permissions.
 
-4. Copy gsheets-sample.csv to gsheets.csv and change at least "google_service_account_email", "google_key_file_p12" and "google_sheet_file_id".
+4. Change fb-gsheets.csv with your google_service_account_email, google_key_file_p12, google_sheet_file_id.
+- Upon succesful execution, CSV input should be seen on google_sheet_name sheet of the google_sheet_file_id spreadsheet 
 
-5. On Linux or Mac, give execution permissions to run.sh file and execute it
+### Google Analytics CSV
 
-$ chmod u+x ./load.sh
+1. If you don't currently have a service account and download its p12 file, create a service account and download its p12 file.
+- Open the Service Accounts page in the GCP Console https://console.cloud.google.com/iam-admin/serviceaccounts
+- Click Select a project, select your project and click Open.
+- Click Create Service Account and enter a service account name (friendly display name), an optional description, select a role you wish to grant to the service account, and then click Save.
+- Create a key and select P12. Download your p12 file.
+- Write down your google_service_account_email and google_key_file_p12
 
-$ ./load.sh
+2. Enable APIs Google Analytics Reporting API v3 on https://console.cloud.google.com/apis/library/analytics.googleapis.com
 
-6. On https://docs.google.com/spreadsheets/d/google_sheet_file_id/edit you will have your facebook_ads.csv data.
+3. Add google_service_account_email as user with read permisions on you GA View. Write down viewId.
+
+4. Change ga.csv with your google_service_account_email, google_key_file_p12 and google_ga_view
+- Upon succesful execution, output/ga.csv will show aquisition data for last days with the indicated goal metric as last column too.
+
+### Google Analytics CSV to Gsheets
+
+0. See "Google Analytics CSV" connector setup first.
+
+1. You should already have a service account and its p12 file. Enable APIs Google Sheets API on https://console.cloud.google.com/apis/library/sheets.googleapis.com
+
+3. Open or create a new Google Spreadsheet and write down its file id.
+- You can see google_sheet_file_id on URL https://docs.google.com/spreadsheets/d/google_sheet_file_id/edit
+- Add google_service_account_email user with edit permissions.
+
+4. Change ga-sheets.csv with your google_service_account_email, google_key_file_p12, google_sheet_file_id.
+- Upon succesful execution, CSV input should be seen on google_sheet_name sheet of the google_sheet_file_id spreadsheet 
 
 
-### Open for collaborations
+## Open for collaborations
 You can do [pull resquests](https://github.com/jrosell/marketing-data-connectors/pulls) or [open issues](https://github.com/jrosell/marketing-data-connectors/issues) if you want to help.
-
-## Spanish
-### Jobs de Talend para extraer datos de marketing usando Facebook Marketing API, etc
-
-#### Facebook Ads
-
-1. Crea una app o añade Marketing API a una app existente: https://developers.facebook.com/apps/
-
-
-2. Necesitas el ad_account_id y el access_token. 
-El ad_account_id tiene un formato como este act_#####. El ads_access_token es una cadena de testos muy larga.
-
-The ad_account_id format is like this one act_#####.
-
-![ad_account_id](docs/ad_account_id.png)
-
-
-The access_token format is a very long string.
-
-![access_token](docs/access_token.png)
-
-3. Clona o descarga & extrae este repositorio
-https://github.com/jrosell/marketing-data-connectors.git
-
-4. Copia config-sample.csv a config.csv & cambia los datos de facebook_ads_ad_account_id & facebook_ads_access_token con tu ad_account_id & access_token
-
-5. En Linux o Mac, da permisos de ejecución al fichero run.sh y ejecútalo:
-
-$ chmod u+x ./run.sh
-
-$ ./run.sh
-
-6. En output/facebook_ads.csv tendrás los datos de los últimos facebook_ads_days días. Puedes abrirlo usando [Libreoffice](https://www.libreoffice.org/) o cualquier programa de hojas de cálculo.
-
-![libreoffice_csv](docs/libreoffice_csv.png)
-
-
-#### Google Spreadsheet
-
-1. Crea un service account y descarga su fichero p12.
-- Abre la página de service account en la consola GCP https://console.cloud.google.com/iam-admin/serviceaccounts
-- Selecciona un proyecto y abrelo.
-- Crea el service account y entra su nombre, descripción (opcional) y el rol (opcional).
-- Edita tu google_service_account_email, crea una clave y selecciona P12.
-- Descarga tu fichero google_key_file_p12 
-
-2. Habilita Google Sheets API en https://console.cloud.google.com/apis/library/sheets.googleapis.com?q=sheets
-
-3. Crea un nuevo Google Spreadsheet y anota su id.
-google_sheet_file_id es el id en https://docs.google.com/spreadsheets/d/google_sheet_file_id/edit
-
-4. Copia gsheets-sample.csv a gsheets.csv y cambia como mínimo "google_service_account_email", "google_key_file_p12" y "google_sheet_file_id".
-
-5. En Linux o Mac, da permisos de ejecución a load.sh y ejecutalo
-
-$ chmod u+x ./load.sh
-
-$ ./load.sh
-
-6. En https://docs.google.com/spreadsheets/d/google_sheet_file_id/edit tendrás los datos del fichero facebook_ads.csv que hayas indicado.
-
-
-### Abierto a colaboraciones
-Puedes hacer un (pull request)[https://github.com/jrosell/marketing-data-connectors/pulls] o [abrir casos](https://github.com/jrosell/marketing-data-connectors/issues) si quieres ayudar.

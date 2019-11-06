@@ -1,6 +1,8 @@
 output/
-config.csv
-gsheets.csv
+fb.csv
+fb-gsheets.csv
+ga.csv
+ga-gsheets.csv
 .~*
 *.zip
 *.p12
