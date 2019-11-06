@@ -47,7 +47,7 @@ $ crontab -e
 
 - The access_token is a very long string that you get when you give read_insights and ads_read permissions to your app.
 
-![access_token](assets/access_token.png)
+![access_token](assets/access_token_fb.png)
 
 3. Open fb.csv and change at last facebook_ads_ad_account_id & facebook_ads_access_token with your ad_account_id & access_token
 - In days, set the numbers of days you want to go back from yesterday.
