@@ -27,7 +27,7 @@ $ ./run.sh
 > run.bat
 ```
 
-5. You may want to schedule it daily using cronjob. For example, at 8am every day.
+5. You may want to schedule it daily using cronjob. For example, at 8am every day on Linux:
 ```
 $ crontab -e
 
@@ -43,11 +43,11 @@ $ crontab -e
 
 - The ad_account_id format is like this one act_#####. You can see it "act=" as a parameter on you business manager account and it will be written as "act_"
 
-![ad_account_id](docs/ad_account_id.png)
+![ad_account_id](assets/ad_account_id.png)
 
 - The access_token is a very long string that you get when you give read_insights permissions to your app.
 
-![access_token](docs/access_token.png)
+![access_token](assets/access_token.png)
 
 3. Open fb.csv and change at last facebook_ads_ad_account_id & facebook_ads_access_token with your ad_account_id & access_token
 - In days, set the numbers of days you want to go back from yesterday.
@@ -55,7 +55,7 @@ $ crontab -e
 
 4. Check execution results on output/facebook_ads.csv. You can open it using [Libreoffice](https://www.libreoffice.org/) or any spreadsheet software.
 
-![libreoffice_csv](docs/libreoffice_csv.png)
+![libreoffice_csv](assets/libreoffice_csv.png)
 
 
 #### Facebook CSV to Gsheets
