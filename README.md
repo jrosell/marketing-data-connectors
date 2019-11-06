@@ -45,7 +45,7 @@ $ crontab -e
 
 ![ad_account_id](assets/ad_account_id.png)
 
-- The access_token is a very long string that you get when you give read_insights permissions to your app.
+- The access_token is a very long string that you get when you give read_insights and ads_read permissions to your app.
 
 ![access_token](assets/access_token.png)
 
