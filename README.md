@@ -103,4 +103,5 @@ $ crontab -e
 
 
 ## Open for collaborations
-You can do [pull resquests](https://github.com/jrosell/marketing-data-connectors/pulls) or [open issues](https://github.com/jrosell/marketing-data-connectors/issues) if you want to help.
+- You can do [pull resquests](https://github.com/jrosell/marketing-data-connectors/pulls) or [open issues](https://github.com/jrosell/marketing-data-connectors/issues) if you want to help.
+- Hire me at https://thediar.com/en/ if you need any enterprise support.
