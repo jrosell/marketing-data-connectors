@@ -15,12 +15,18 @@ https://github.com/jrosell/marketing-data-connectors.git
 
 3. See detailed connectors setup section.
 
-4. On Linux or Mac, give execution permissions to run.sh file and execute it
+4. Give execution permisions and execute:
+- On Linux or Mac, use run.sh file from terminal
 ```
 $ chmod u+x ./run.sh
 
 $ ./run.sh
 ```
+- On Windows, check run.bat properties and run from comand line
+```
+> run.bat
+```
+
 5. You may want to schedule it daily using cronjob. For example, at 8am every day.
 ```
 $ crontab -e
