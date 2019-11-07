@@ -110,6 +110,6 @@ $ crontab -e
 
 
 ## About us
-- I'm Jordi Rosell. Working at The ducks in a row. If do you want to sponsor us, [here is our paypal](https://www.paypal.me/thediar)
+- I'm [Jordi Rosell](https://twitter.com/jrosell). Working at The ducks in a row. If do you want to sponsor us, [here is our paypal](https://www.paypal.me/thediar)
 - Open for collaborations. You can do [pull resquests](https://github.com/jrosell/marketing-data-connectors/pulls) or [open issues](https://github.com/jrosell/marketing-data-connectors/issues) if you want to help.
 - Hire me at https://thediar.com/en/ if you need any enterprise support.
