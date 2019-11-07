@@ -109,6 +109,7 @@ $ crontab -e
 - Upon succesful execution, CSV input should be seen on google_sheet_name sheet of the google_sheet_file_id spreadsheet 
 
 
-## Open for collaborations
-- You can do [pull resquests](https://github.com/jrosell/marketing-data-connectors/pulls) or [open issues](https://github.com/jrosell/marketing-data-connectors/issues) if you want to help.
+## About us
+- I'm Jordi Rosell. Working at The ducks in a row. If do you want to sponsor us, [here is our paypal](https://www.paypal.me/thediar)
+- Open for collaborations. You can do [pull resquests](https://github.com/jrosell/marketing-data-connectors/pulls) or [open issues](https://github.com/jrosell/marketing-data-connectors/issues) if you want to help.
 - Hire me at https://thediar.com/en/ if you need any enterprise support.
