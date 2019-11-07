@@ -6,7 +6,7 @@
 1. Clone or download & extract this repository
 https://github.com/jrosell/marketing-data-connectors.git
 
-2. Decide what connectors you will use and comment/uncomment run.sh what you need or not.
+2. Decide what connectors you will use and comment/uncomment run.sh (Linux/Mac) or run.bat (Windows) what you need or not.
 
 - Facebook CSV: copy fb-sample.csv to fb.csv
 - Facebook CSV to Gsheets too: Copy fb-sheets-sample.csv to fb-sheets.csv
@@ -18,12 +18,13 @@ https://github.com/jrosell/marketing-data-connectors.git
 4. Give execution permisions and execute:
 - On Linux or Mac, use run.sh file from terminal
 ```
+$ cd your-absolute-file-path
 $ chmod u+x ./run.sh
-
 $ ./run.sh
 ```
-- On Windows, check run.bat properties and run from comand line
+- On Windows, check run.bat properties and run from command line (cmd.exe)
 ```
+> cd your-absolute-file-path
 > run.bat
 ```
 
@@ -31,7 +32,7 @@ $ ./run.sh
 ```
 $ crontab -e
 
-0 8 * * * /your-absolute-path/run.sh
+0 8 * * * /your-absolute-file-path/run.sh
 ```
 
 ### Detailed connectors setup
