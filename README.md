@@ -1,5 +1,5 @@
 # marketing-data-connectors
-## Talend jobs to extract and load marketing data using Facebook Marketing API, Google Analytics, Google Sheets, etc
+## Command line batch jobs that run java to extract and load marketing data using Facebook Marketing API, Google Analytics API, Google Sheets API, etc
 
 ### Setup overview
 
