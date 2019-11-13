@@ -8,10 +8,9 @@ https://github.com/jrosell/marketing-data-connectors.git
 
 2. Decide what connectors you will use and comment/uncomment run.sh (Linux/Mac) or run.bat (Windows) what you need or not.
 
-- Facebook CSV: copy fb-sample.csv to fb.csv
-- Facebook CSV to Gsheets too: Copy fb-sheets-sample.csv to fb-sheets.csv
-- Google Analytics CSV: Copy fb-sample.csv to fb.csv
-- Google Analytics CSV to Gsheets too: Copy ga-sheets-sample.csv to ga-sheets.csv
+- FB_Campaigns: Copy fb-sample.csv to fb.csv and edit the copy as appropiate
+- GA_Campaigns: Copy ga-sample.csv to ga.csv and edit the copy as appropiate
+- GSheets: Copy sheets-sample.csv to sheets.csv and edit the copy as appropiate
 
 3. See detailed connectors setup section.
 
@@ -37,8 +36,9 @@ $ crontab -e
 
 ### Detailed connectors setup
 
-#### Facebook CSV
-1. Create an app or add Marketing API product to an existing one: https://developers.facebook.com/apps/
+#### FB_Campaigns
+
+1. On facebook, Create an app or add Marketing API product to an existing one: https://developers.facebook.com/apps/
 
 2. You need to generate a access_token and you need to know your ad_account_id. 
 
@@ -58,28 +58,8 @@ $ crontab -e
 
 ![libreoffice_csv](assets/libreoffice_csv.png)
 
-
-#### Facebook CSV to Gsheets
-
-0. See "Facebook CSV" connector setup first.
-
-1. If you don't currently have a service account and download its p12 file, create a service account and download its p12 file.
-- Open the Service Accounts page in the GCP Console https://console.cloud.google.com/iam-admin/serviceaccounts
-- Click Select a project, select your project and click Open.
-- Click Create Service Account and enter a service account name (friendly display name), an optional description, select a role you wish to grant to the service account, and then click Save.
-- Create a key and select P12. Download your p12 file.
-- Write down your google_service_account_email and google_key_file_p12
-
-2. Enable APIs Google Sheets API on https://console.cloud.google.com/apis/library/sheets.googleapis.com
-
-3. Open or create a new Google Spreadsheet and write down its file id.
-- You can see google_sheet_file_id on URL https://docs.google.com/spreadsheets/d/google_sheet_file_id/edit
-- Add google_service_account_email user with edit permissions.
-
-4. Change fb-gsheets.csv with your google_service_account_email, google_key_file_p12, google_sheet_file_id.
-- Upon succesful execution, CSV input should be seen on google_sheet_name sheet of the google_sheet_file_id spreadsheet 
-
-### Google Analytics CSV
+ 
+### GA_Campaigns
 
 1. If you don't currently have a service account and download its p12 file, create a service account and download its p12 file.
 - Open the Service Accounts page in the GCP Console https://console.cloud.google.com/iam-admin/serviceaccounts
@@ -93,11 +73,12 @@ $ crontab -e
 3. Add google_service_account_email as user with read permisions on you GA View. Write down viewId.
 
 4. Change ga.csv with your google_service_account_email, google_key_file_p12 and google_ga_view
+- Check google_ga_view on the admin section of your Google Analytics view.
 - Upon succesful execution, output/ga.csv will show aquisition data for last days with the indicated goal metric as last column too.
 
-### Google Analytics CSV to Gsheets
+### Gsheets
 
-0. See "Google Analytics CSV" connector setup first.
+0. See FB_Campaigns and GA_Campaigns connector setup first.
 
 1. You should already have a service account and its p12 file. Enable APIs Google Sheets API on https://console.cloud.google.com/apis/library/sheets.googleapis.com
 
@@ -105,8 +86,9 @@ $ crontab -e
 - You can see google_sheet_file_id on URL https://docs.google.com/spreadsheets/d/google_sheet_file_id/edit
 - Add google_service_account_email user with edit permissions.
 
-4. Change ga-sheets.csv with your google_service_account_email, google_key_file_p12, google_sheet_file_id.
+4. Change gsheets.csv with your google_service_account_email, google_key_file_p12, google_sheet_file_id.
 - Upon succesful execution, CSV input should be seen on google_sheet_name sheet of the google_sheet_file_id spreadsheet 
+- Is important to set desired 'type' as schema is used in other connectors: fb_campaigns, fb_campaigns_stats, fb_campaigns_actions, ga_campaigns, ga_campaigns_stats, ga_campaigns_goals.
 
 
 ## About us

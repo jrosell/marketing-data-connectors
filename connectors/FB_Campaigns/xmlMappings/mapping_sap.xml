@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!-- Similar as db system, but this mapping file is use for SAP -->
+<mapping>
+    <dbms product="SAP" id="sap_id" label="Mapping SAP" default="true">
+        <dbTypes>
+            <dbType type="BIG_DECIMAL"  ignorePre="true" />
+            <dbType type="BIG_INTEGER"  ignorePre="true" />
+            <dbType type="BYTE" defaultLength="1" ignorePre="true" />
+            <dbType type="DATE" ignorePre="true" />
+            <dbType type="DOUBLE"  ignorePre="true" ignoreLen="true"/>
+            <dbType type="INTEGER"  ignorePre="true" ignoreLen="true"/>
+            <dbType type="RAW"  ignorePre="true" />
+            <dbType type="SHORT"  ignorePre="true" ignoreLen="true"/>
+            <dbType type="STRING" ignorePre="true" />
+            <dbType type="TIME" ignoreLen="true" ignorePre="true" />
+        </dbTypes>
+        <language name="java">
+            <talendToDbTypes><!-- Adviced mappings  -->
+                <talendType type="id_List"/>
+                <talendType type="id_Boolean"/>
+                <talendType type="id_Byte">
+                    <dbType type="BYTE" default="true"/>
+                </talendType>
+                <talendType type="id_byte[]">
+                    <dbType type="RAW" default="true"/>
+                </talendType>
+                <talendType type="id_Character"/>
+                <talendType type="id_Date">
+                    <dbType type="DATE" default="true"/>
+                    <dbType type="TIME"/>
+                </talendType>
+                <talendType type="id_BigDecimal">
+                    <dbType type="BIG_DECIMAL" default="true"/>
+                    <dbType type="BIG_INTEGER"/>
+                </talendType>
+                <talendType type="id_Double">
+                    <dbType type="DOUBLE" default="true"/>
+                </talendType>    
+                <talendType type="id_Float">
+                    <dbType type="DOUBLE" default="true"/>
+                </talendType>
+                <talendType type="id_Integer">
+                    <dbType type="INTEGER" default="true"/>
+                </talendType>
+                <talendType type="id_Long">
+                	<dbType type="BIG_INTEGER" default="true"/>
+                </talendType>
+                <talendType type="id_Object">
+                    <dbType type="BIG_INTEGER"/>
+                </talendType>
+                <talendType type="id_Short">
+                    <dbType type="SHORT" default="true"/>
+                </talendType>
+                <talendType type="id_String">
+                    <dbType type="STRING" default="true"/>
+                </talendType>
+            </talendToDbTypes>
+            <dbToTalendTypes>
+                <dbType type="BIG_DECIMAL"  >
+                    <talendType type="id_BigDecimal" default="true" />
+                </dbType>    
+                <dbType type="BIG_INTEGER" >
+                    <talendType type="id_BigDecimal" default="true"/>
+                    <talendType type="id_Object"/>
+                </dbType> 
+                <dbType type="BYTE">
+                    <talendType type="id_Byte" default="true" />
+                </dbType>
+                <dbType type="DATE">
+                    <talendType type="id_Date" default="true" />
+                </dbType>
+                <dbType type="DOUBLE">
+                    <talendType type="id_Double" default="true"/>
+                </dbType> 
+                <dbType type="INTEGER">
+                    <talendType type="id_Integer" default="true" />
+                </dbType>
+                <dbType type="RAW">
+                    <talendType type="id_byte[]" default="true" />
+                </dbType>
+                <dbType type="SHORT">
+                    <talendType type="id_Short" default="true" />
+                </dbType>
+                <dbType type="STRING">
+                    <talendType type="id_String" default="true" />
+                </dbType>
+                <dbType type="TIME">
+                    <talendType type="id_Date" default="true" />
+                </dbType>
+            </dbToTalendTypes>
+        </language>
+    </dbms>
+</mapping>

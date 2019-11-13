@@ -1,0 +1,7 @@
+"google_service_account_email","google_key_file_p12","google_sheet_file_id","google_sheet_name","input","type"
+"user@myproject.iam.gserviceaccount.com","myproject-uniqueid.p12","id_of_the_google_sheets_you_created_and_gived_permisions","fb_campaigns_actions","output/fb_campaigns_actions.csv","fb_campaigns_actions"
+"user@myproject.iam.gserviceaccount.com","myproject-uniqueid.p12","id_of_the_google_sheets_you_created_and_gived_permisions","fb_campaigns_stats","output/fb_campaigns_stats.csv","fb_campaigns_stats"
+"user@myproject.iam.gserviceaccount.com","myproject-uniqueid.p12","id_of_the_google_sheets_you_created_and_gived_permisions","fb_campaigns","output/fb_campaigns.csv","fb_campaigns"
+"user@myproject.iam.gserviceaccount.com","myproject-uniqueid.p12","id_of_the_google_sheets_you_created_and_gived_permisions","ga_campaigns_goals","output/ga_campaigns_goals.csv","ga_campaigns_goals"
+"user@myproject.iam.gserviceaccount.com","myproject-uniqueid.p12","id_of_the_google_sheets_you_created_and_gived_permisions","ga_campaigns_stats","output/ga_campaigns_stats.csv","ga_campaigns_stats"
+"user@myproject.iam.gserviceaccount.com","myproject-uniqueid.p12","id_of_the_google_sheets_you_created_and_gived_permisions","ga_campaigns","output/ga_campaigns.csv","ga_campaigns"
