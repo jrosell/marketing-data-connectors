@@ -6,15 +6,14 @@
 1. Clone or download & extract this repository
 https://github.com/jrosell/marketing-data-connectors.git
 
-2. Decide what connectors you will use and comment/uncomment run.sh (Linux/Mac) or run.bat (Windows) what you need or not.
+2. Decide what connectors you will use and comment/uncomment run.sh (Linux/Mac) or run.bat (Windows) what you need or not, and see detailed connectors setup section.
 
 - FB_Campaigns: Copy fb-sample.csv to fb.csv and edit the copy as appropiate
 - GA_Campaigns: Copy ga-sample.csv to ga.csv and edit the copy as appropiate
+- Mailchimp_Campaigns: Copy mailchimp-sample.csv to mailchimp.csv and edit the copy as appropiate
 - GSheets: Copy sheets-sample.csv to sheets.csv and edit the copy as appropiate
 
-3. See detailed connectors setup section.
-
-4. Give execution permisions and execute:
+3. Give execution permisions and execute:
 - On Linux or Mac, use run.sh file from terminal
 ```
 $ cd your-absolute-file-path
@@ -27,7 +26,7 @@ $ ./run.sh
 > run.bat
 ```
 
-5. You may want to schedule it daily using cronjob. For example, at 8am every day on Linux:
+4. You may want to schedule it daily using cronjob. For example, at 8am every day on Linux:
 ```
 $ crontab -e
 
@@ -76,6 +75,16 @@ $ crontab -e
 - Check google_ga_view on the admin section of your Google Analytics view.
 - Upon succesful execution, output/ga.csv will show aquisition data for last days with the indicated goal metric as last column too.
 
+### Mailchimp_Campaigns
+
+1. Login your Mailchimp account, go to Account / Extras / API keys and click Create A Key.
+2. Edit mailchimp.csv:
+- Name your account.
+- Set your apikey.
+- Last part of apikey contains your datacenter (example us3 or us10).
+- Set your count (Numbre of campaigns you will get with this connector).
+- Upon succesful execution, you will get campaign data at retrieve date on output/mailchimp_campaigns.csv file.
+
 ### Gsheets
 
 0. See FB_Campaigns and GA_Campaigns connector setup first.
@@ -88,10 +97,10 @@ $ crontab -e
 
 4. Change gsheets.csv with your google_service_account_email, google_key_file_p12, google_sheet_file_id.
 - Upon succesful execution, CSV input should be seen on google_sheet_name sheet of the google_sheet_file_id spreadsheet 
-- Is important to set desired 'type' as schema is used in other connectors: fb_campaigns, fb_campaigns_stats, fb_campaigns_actions, ga_campaigns, ga_campaigns_stats, ga_campaigns_goals.
+- Is important to set desired 'type' as schema is used in other connectors: fb_campaigns, fb_campaigns_stats, fb_campaigns_actions, ga_campaigns, ga_campaigns_stats, ga_campaigns_goals and mailchimp_campaigns.
 
 
 ## About us
-- I'm [Jordi Rosell](https://twitter.com/jrosell), working at The ducks in a row. If do you want to sponsor us, [here is our paypal](https://www.paypal.me/thediar)
+- I'm [Jordi Rosell](https://twitter.com/jrosell), working at The ducks in a row. 
 - Open for collaborations. You can do [pull resquests](https://github.com/jrosell/marketing-data-connectors/pulls) or [open issues](https://github.com/jrosell/marketing-data-connectors/issues) if you want to help.
-- Hire me at https://www.thediar.com/en/ if you need any enterprise support.
+- Hire me at https://www.thediar.com/en/ if you need any enterprise support or if you want to sponsor us, [here is our paypal](https://www.paypal.me/thediar)

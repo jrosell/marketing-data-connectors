@@ -5,3 +5,4 @@
 "user@myproject.iam.gserviceaccount.com","myproject-uniqueid.p12","id_of_the_google_sheets_you_created_and_gived_permisions","ga_campaigns_goals","output/ga_campaigns_goals.csv","ga_campaigns_goals"
 "user@myproject.iam.gserviceaccount.com","myproject-uniqueid.p12","id_of_the_google_sheets_you_created_and_gived_permisions","ga_campaigns_stats","output/ga_campaigns_stats.csv","ga_campaigns_stats"
 "user@myproject.iam.gserviceaccount.com","myproject-uniqueid.p12","id_of_the_google_sheets_you_created_and_gived_permisions","ga_campaigns","output/ga_campaigns.csv","ga_campaigns"
+"user@myproject.iam.gserviceaccount.com","myproject-uniqueid.p12","id_of_the_google_sheets_you_created_and_gived_permisions","mailchimp_campaigns","output/mailchimp_campaigns.csv","mailchimp_campaigns"

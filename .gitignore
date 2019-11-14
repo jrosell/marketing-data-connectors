@@ -1,9 +1,8 @@
 output/
 fb.csv
 ga.csv
+mailchimp.csv
 gsheets.csv
-fb-gsheets.csv
-ga-gsheets.csv
 .~*
 *.zip
 *.p12
