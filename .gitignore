@@ -1,6 +1,7 @@
 output/
 fb.csv
 ga.csv
+gw.csv
 mailchimp.csv
 gsheets.csv
 .~*

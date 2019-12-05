@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<mapping>
+	<dbms product="Exasol" id="Exasol_id" label="Mapping Exasol"
+		default="true">
+		<dbTypes>
+			<dbType type="BIGINT" ignoreLen="true" ignorePre="true"/>
+			<dbType type="BINARY_DOUBLE" ignoreLen="true" ignorePre="true"/>
+			<dbType type="BINARY_FLOAT" ignoreLen="true" ignorePre="true"/>
+			<dbType type="BOOLEAN" ignoreLen="true" ignorePre="true"/>
+			<dbType type="CHAR" defaultLength="20" ignoreLen="false" ignorePre="true"/>
+			<dbType type="DATE" ignoreLen="true" ignorePre="true"/>
+			<dbType type="DECIMAL" defaultLength="20" defaultPrecision="10" ignoreLen="false" ignorePre="false"/>
+			<dbType type="DOUBLE PRECISION" ignoreLen="true" ignorePre="true"/>
+			<dbType type="FLOAT" ignoreLen="true" ignorePre="true"/>
+			<dbType type="GEOMETRY" ignoreLen="true" ignorePre="true"/>
+			<dbType type="INTEGER" ignoreLen="true" ignorePre="true"/>
+			<dbType type="INTERVAL DAY TO SECOND" ignoreLen="true" ignorePre="true"/>
+			<dbType type="INTERVAL YEAR TO MONTH" ignoreLen="true" ignorePre="true"/>
+			<dbType type="LONG VARCHAR" default="true" defaultLength="20000" ignoreLen="false" ignorePre="true"/>
+			<dbType type="SMALLINT" ignoreLen="true" ignorePre="true"/>
+			<dbType type="TIMESTAMP" ignoreLen="true" ignorePre="true"/>
+			<dbType type="TIMESTAMP WITH LOCAL TIME ZONE" ignoreLen="true" ignorePre="true"/>
+			<dbType type="TINYINT" ignoreLen="true" ignorePre="true"/>
+			<dbType type="VARCHAR" default="true" defaultLength="200" ignoreLen="false" ignorePre="true"/>
+		</dbTypes>
+
+		<language name="java">
+			<talendToDbTypes><!-- Advised mappings  -->
+				<talendType type="id_List">
+				</talendType>
+				<talendType type="id_Boolean">
+					<dbType type="BOOLEAN" default="true"/>
+				</talendType>
+				<talendType type="id_Byte">			
+					<dbType type="SMALLINT" default="true"/>
+				</talendType>
+				<talendType type="id_byte[]">
+					<dbType type="CHAR" default="true"/>
+				</talendType>
+				<talendType type="id_Character">
+					<dbType type="CHAR" default="true"/>
+				</talendType>
+				<talendType type="id_Date">
+					<dbType type="DATE" default="true"/>
+					<dbType type="TIMESTAMP"/>
+					<dbType type="TIMESTAMP WITH LOCAL TIME ZONE"/>
+				</talendType>
+				<talendType type="id_BigDecimal">
+					<dbType type="DECIMAL" default="true"/>
+				</talendType>
+				<talendType type="id_Double">
+					<dbType type="DOUBLE PRECISION" default="true"/>
+					<dbType type="BINARY_DOUBLE"/>
+				</talendType>
+				<talendType type="id_Float">
+					<dbType type="FLOAT" default="true"/>
+					<dbType type="BINARY_FLOAT"/>
+				</talendType>
+				<talendType type="id_Integer">
+					<dbType type="INTEGER" default="true"/>
+					<dbType type="DECIMAL"/>
+				</talendType>
+				<talendType type="id_Long">
+					<dbType type="BIGINT" default="true"/>
+					<dbType type="DECIMAL"/>
+				</talendType>
+				<talendType type="id_Object">
+				</talendType>
+				<talendType type="id_Short">
+					<dbType type="SMALLINT" default="true"/>
+					<dbType type="TINYINT"/>
+					<dbType type="DECIMAL"/>
+				</talendType>
+				<talendType type="id_String">
+					<dbType type="VARCHAR" default="true"/>
+					<dbType type="CHAR"/>
+					<dbType type="LONG VARCHAR"/>
+					<dbType type="GEOMETRY"/>
+					<dbType type="INTERVAL DAY TO SECOND"/>
+					<dbType type="INTERVAL YEAR TO MONTH"/>
+				</talendType>
+			</talendToDbTypes>
+			<dbToTalendTypes><!-- Advised mappings  -->
+				<dbType type="VARCHAR">
+					<talendType type="id_String" default="true" />
+				</dbType>
+				<dbType type="GEOMETRY">
+					<talendType type="id_String" default="true" />				
+				</dbType>																																
+				<dbType type="CHAR">
+					<talendType type="id_String" default="true" />
+					<talendType type="id_Character" />
+				</dbType>
+				<dbType type="LONG VARCHAR">
+					<talendType type="id_String" default="true" />
+				</dbType>
+				<dbType type="INTERVAL DAY TO SECOND">
+					<talendType type="id_String" default="true" />				
+				</dbType>																																
+				<dbType type="INTERVAL YEAR TO MONTH">
+					<talendType type="id_String" default="true" />				
+				</dbType>																																
+				<dbType type="DECIMAL">
+					<talendType type="id_BigDecimal" default="true" />
+					<talendType type="id_Long"/>
+					<talendType type="id_Integer"/>
+					<talendType type="id_Double"/>
+				</dbType>
+				<dbType type="TINYINT">
+					<talendType type="id_Short" default="true" />
+				</dbType>
+				<dbType type="SMALLINT">
+					<talendType type="id_Short" default="true" />
+				</dbType>
+				<dbType type="BIGINT">
+					<talendType type="id_Long" default="true" />
+				</dbType>
+				<dbType type="INTEGER">
+					<talendType type="id_Integer" default="true" />
+				</dbType>
+				<dbType type="FLOAT">
+					<talendType type="id_Float" default="true" />
+				</dbType>
+				<dbType type="BINARY_FLOAT">
+					<talendType type="id_Float" default="true" />
+				</dbType>				
+				<dbType type="DOUBLE PRECISION">
+					<talendType type="id_Double" default="true" />
+				</dbType>
+				<dbType type="BINARY_DOUBLE">
+					<talendType type="id_Double" default="true" />
+				</dbType>
+				<dbType type="DATE">
+					<talendType type="id_Date" default="true" />				
+				</dbType>																																
+				<dbType type="TIMESTAMP">
+					<talendType type="id_Date" default="true" />				
+				</dbType>																																
+				<dbType type="TIMESTAMP WITH LOCAL TIME ZONE">
+					<talendType type="id_Date" default="true" />				
+				</dbType>																																
+				<dbType type="BOOLEAN">
+					<talendType type="id_Boolean" default="true" />				
+				</dbType>																																
+			</dbToTalendTypes>
+		</language>
+	</dbms>
+
+</mapping>

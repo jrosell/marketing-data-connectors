@@ -75,6 +75,18 @@ $ crontab -e
 - Check google_ga_view on the admin section of your Google Analytics view.
 - Upon succesful execution, output/ga.csv will show aquisition data for last days with the indicated goal metric as last column too.
 
+### GW_SearchAnalytics
+
+
+1. You should have a service account and its p12 file. Enable  Google Search Console API  on https://console.cloud.google.com/apis/library/webmasters.googleapis.com
+
+2. Add google_service_account_email as user with Restricted or Full permisions on your Google Search Console Property. Write down siteUrl
+
+4. Change gw.csv with your google_service_account_email, google_key_file_p12 and siteUrl
+- Check siteUrl on the settings section of your Google Search Console property.
+- Upon succesful execution, output/gw_query.csv, output/gw_page.csv, output/gw_query_page.csv and output/gw_query_page_country_dimension.csv will be generated with impressions, clicks, ctr, position metrics.
+
+
 ### Mailchimp_Campaigns
 
 1. Login your Mailchimp account, go to Account / Extras / API keys and click Create A Key.
@@ -87,9 +99,9 @@ $ crontab -e
 
 ### Gsheets
 
-0. See FB_Campaigns and GA_Campaigns connector setup first.
+0. See FB_Campaigns, GA_Campaigns, GW_SearchAnalytics connector setup first.
 
-1. You should already have a service account and its p12 file. Enable APIs Google Sheets API on https://console.cloud.google.com/apis/library/sheets.googleapis.com
+1. You should have a service account and its p12 file. Enable APIs Google Sheets API on https://console.cloud.google.com/apis/library/sheets.googleapis.com
 
 3. Open or create a new Google Spreadsheet and write down its file id.
 - You can see google_sheet_file_id on URL https://docs.google.com/spreadsheets/d/google_sheet_file_id/edit
@@ -97,7 +109,7 @@ $ crontab -e
 
 4. Change gsheets.csv with your google_service_account_email, google_key_file_p12, google_sheet_file_id.
 - Upon succesful execution, CSV input should be seen on google_sheet_name sheet of the google_sheet_file_id spreadsheet 
-- Is important to set desired 'type' as schema is used in other connectors: fb_campaigns, fb_campaigns_stats, fb_campaigns_actions, ga_campaigns, ga_campaigns_stats, ga_campaigns_goals and mailchimp_campaigns.
+- Is important to set desired 'type' as schema is used in other connectors: fb_campaigns, fb_campaigns_stats, fb_campaigns_actions, ga_campaigns, ga_campaigns_stats, ga_campaigns_goals and mailchimp_campaigns, gw_query, gw_page, gw_query_and_page, gw_query_page_country_and_device.
 
 
 ## About us
