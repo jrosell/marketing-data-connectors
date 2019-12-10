@@ -12,6 +12,9 @@ https://github.com/jrosell/marketing-data-connectors.git
 - GA_Campaigns: Copy ga-sample.csv to ga.csv and edit the copy as appropiate
 - Mailchimp_Campaigns: Copy mailchimp-sample.csv to mailchimp.csv and edit the copy as appropiate
 - GSheets: Copy sheets-sample.csv to sheets.csv and edit the copy as appropiate
+- Mysql: Copy mysql-sample.csv to mysql.csv and edit the copy as appropiate
+- Postgresql: Copy postgresql-sample.csv to postgresql.csv and edit the copy as appropiate
+- Clickhouse: Copy clickhouse-sample.csv to clickhouse.csv and edit the copy as appropiate
 
 3. Give execution permisions and execute:
 - On Linux or Mac, use run.sh file from terminal
