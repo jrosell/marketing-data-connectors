@@ -10,6 +10,7 @@ https://github.com/jrosell/marketing-data-connectors.git
 
 - FB_Campaigns: Copy fb-sample.csv to fb.csv and edit the copy as appropiate
 - GA_Campaigns: Copy ga-sample.csv to ga.csv and edit the copy as appropiate
+- GW_SearchAnalytics: Copy gw-sample.csv to gw.csv and edit the copy as appropiate
 - Mailchimp_Campaigns: Copy mailchimp-sample.csv to mailchimp.csv and edit the copy as appropiate
 - GSheets: Copy sheets-sample.csv to sheets.csv and edit the copy as appropiate
 - Mysql: Copy mysql-sample.csv to mysql.csv and edit the copy as appropiate
