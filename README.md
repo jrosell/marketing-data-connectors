@@ -1,5 +1,5 @@
 # marketing-data-connectors
-## Command line batch jobs that run java to extract and load marketing data using Facebook Marketing API, Google Analytics API, Google Sheets API, etc
+## Command line batch jobs that run java runtime environment to extract and load marketing data using Facebook Marketing API, Google Analytics API, Mailchimp API, Google Sheets API, Mysql, Postgresql, Clickhouse, etc
 
 ### Setup overview
 
