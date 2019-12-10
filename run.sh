@@ -21,3 +21,14 @@ chmod u+x connectors/Mailchimp_Campaigns/Mailchimp_Campaigns_run.sh
 chmod u+x connectors/Gsheets/Gsheets_run.sh
 ./connectors/Gsheets/Gsheets_run.sh --context_param path=$ROOT_PATH
 
+# Comment/Unncomment following lines whether you use or not Mysql connector
+chmod u+x connectors/Mysql/Mysql_run.sh
+./connectors/GshMysqleets/Mysql_run.sh --context_param path=$ROOT_PATH
+
+# Comment/Unncomment following lines whether you use or not Postgresql connector
+chmod u+x connectors/Postgresql/Postgresql_run.sh
+./connectors/Postgresql/Postgresql_run.sh --context_param path=$ROOT_PATH
+
+# Comment/Unncomment following lines whether you use or not Clickhouse connector
+chmod u+x connectors/Clickhouse/Clickhouse_run.sh
+./connectors/Clickhouse/Clickhouse_run.sh --context_param path=$ROOT_PATH

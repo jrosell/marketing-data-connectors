@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<mapping>
+    <dbms product="Cassandra" id="cassandra22_datastax_id" label="Mapping Cassandra"
+        default="true">
+        <dbTypes>
+            <dbType type="ascii" ignorePre="true" />
+            <dbType type="bigint" ignorePre="true" />
+            <dbType type="blob" ignorePre="true" />
+            <dbType type="boolean" ignorePre="true" />
+            <dbType type="counter" ignorePre="true" />
+            <dbType type="date" ignorePre="true" />
+            <dbType type="decimal" ignorePre="true" />
+            <dbType type="double" ignorePre="true" />
+            <dbType type="float" ignorePre="true" />
+            <dbType type="inet" ignorePre="true" />
+            <dbType type="int" ignorePre="true" />
+            <dbType type="list" ignorePre="true" />
+            <dbType type="map" ignorePre="true" />
+            <dbType type="set" ignorePre="true" />
+            <dbType type="smallint" ignorePre="true" />
+            <dbType type="text" ignorePre="true" />
+            <dbType type="time" ignorePre="true" />
+            <dbType type="timestamp" ignorePre="true" />
+            <dbType type="timeuuid" ignorePre="true" />
+            <dbType type="tinyint" ignorePre="true" />
+            <dbType type="uuid" ignorePre="true" />
+            <dbType type="varchar" ignorePre="true" />
+            <dbType type="varint" ignorePre="true" />
+        </dbTypes>
+
+        <language name="java">
+            <talendToDbTypes>
+                <talendType type="id_List">
+                    <dbType type="list" default="true"/>
+                </talendType>
+                <talendType type="id_Boolean">
+                    <dbType type="boolean" default="true" />
+                </talendType>
+                <talendType type="id_Byte">
+                    <dbType type="tinyint" default="true" />
+                </talendType>
+                <talendType type="id_byte[]">
+                    <dbType type="blob" default="true" />
+                </talendType>
+                <talendType type="id_Character">
+                    <dbType type="ascii" default="true" />
+                    <dbType type="text" />
+                    <dbType type="varchar" />
+                </talendType>
+                <talendType type="id_Date">
+                    <dbType type="timestamp" default="true" />
+                    <dbType type="date" />
+                </talendType>
+                <talendType type="id_BigDecimal">
+                    <dbType type="decimal" default="true" />
+                </talendType>
+                <talendType type="id_Double">
+                    <dbType type="double" default="true" />
+                </talendType>
+                <talendType type="id_Float">
+                    <dbType type="float" default="true" />
+                </talendType>
+                <talendType type="id_Integer">
+                    <dbType type="int" default="true" />
+                </talendType>
+                <talendType type="id_Long">
+                    <dbType type="bigint" default="true" />
+                    <dbType type="counter" />
+                    <dbType type="time" />
+                </talendType>
+                <talendType type="id_Object">
+                    <dbType type="varint" default="true" />
+                    <dbType type="inet" />
+                    <dbType type="map" />
+                    <dbType type="set" />
+                </talendType>    
+                <talendType type="id_Short">
+                    <dbType type="smallint" default="true" />
+                </talendType>
+                <talendType type="id_String">
+                    <dbType type="ascii" default="true" />
+                    <dbType type="text" />
+                    <dbType type="timeuuid" />
+                    <dbType type="uuid" />
+                    <dbType type="varchar" />
+                </talendType>
+            </talendToDbTypes>
+            <dbToTalendTypes>
+                <dbType type="ascii">
+                    <talendType type="id_String" default="true" />
+                </dbType>
+                <dbType type="bigint">
+                    <talendType type="id_Long" default="true" />
+                </dbType>
+                <dbType type="blob">
+                    <talendType type="id_byte[]" default="true" />
+                </dbType>
+                <dbType type="boolean">
+                    <talendType type="id_Boolean" default="true" />
+                </dbType>
+                <dbType type="counter">
+                    <talendType type="id_Long" default="true" />
+                </dbType>
+                <dbType type="date">
+                    <talendType type="id_Date" default="true" />
+                </dbType>
+                <dbType type="decimal">
+                    <talendType type="id_BigDecimal" default="true" />
+                </dbType>
+                <dbType type="double">
+                    <talendType type="id_Double" default="true" />
+                </dbType>
+                <dbType type="float">
+                    <talendType type="id_Float" default="true" />
+                </dbType>
+                <dbType type="inet">
+                    <talendType type="id_Object" default="true" />
+                </dbType>
+                <dbType type="int">
+                    <talendType type="id_Integer" default="true" />
+                </dbType>
+                <dbType type="list">
+                    <talendType type="id_List" default="true" />
+                </dbType>
+                <dbType type="map">
+                    <talendType type="id_Object" default="true" />
+                </dbType>
+                <dbType type="set">
+                    <talendType type="id_Object" default="true" />
+                </dbType>
+                <dbType type="smallint">
+                    <talendType type="id_Short" default="true" />
+                </dbType>
+                <dbType type="text">
+                    <talendType type="id_String" default="true" />
+                </dbType>
+                <dbType type="time">
+                    <talendType type="id_Long" default="true" />
+                </dbType>
+                <dbType type="timestamp">
+                    <talendType type="id_Date" default="true" />
+                </dbType>
+                <dbType type="timeuuid">
+                    <talendType type="id_String" default="true" />
+                </dbType>
+                <dbType type="tinyint">
+                    <talendType type="id_Byte" default="true" />
+                </dbType>
+                <dbType type="uuid">
+                    <talendType type="id_String" default="true" />
+                </dbType>
+                <dbType type="varchar">
+                    <talendType type="id_String" default="true" />
+                </dbType>
+                <dbType type="varint">
+                    <talendType type="id_Object" default="true" />
+                </dbType>
+            </dbToTalendTypes>
+        </language>
+    </dbms>
+
+</mapping>

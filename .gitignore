@@ -4,6 +4,9 @@ ga.csv
 gw.csv
 mailchimp.csv
 gsheets.csv
+mysql.csv
+postgresql.csv
+clickhouse.csv
 .~*
 *.zip
 *.p12

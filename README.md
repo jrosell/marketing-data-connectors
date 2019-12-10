@@ -99,7 +99,7 @@ $ crontab -e
 
 ### Gsheets
 
-0. See FB_Campaigns, GA_Campaigns, GW_SearchAnalytics connector setup first.
+0. See FB_Campaigns, GA_Campaigns, Mailchimp_Campaigns and GW_SearchAnalytics connector setup first.
 
 1. You should have a service account and its p12 file. Enable APIs Google Sheets API on https://console.cloud.google.com/apis/library/sheets.googleapis.com
 
@@ -108,11 +108,44 @@ $ crontab -e
 - Add google_service_account_email user with edit permissions.
 
 4. Change gsheets.csv with your google_service_account_email, google_key_file_p12, google_sheet_file_id.
-- Upon succesful execution, CSV input should be seen on google_sheet_name sheet of the google_sheet_file_id spreadsheet 
-- Is important to set desired 'type' as schema is used in other connectors: fb_campaigns, fb_campaigns_stats, fb_campaigns_actions, ga_campaigns, ga_campaigns_stats, ga_campaigns_goals and mailchimp_campaigns, gw_query, gw_page, gw_query_and_page, gw_query_page_country_and_device.
+- Upon succesful execution, CSV input data should be seen (insert at first row) on google_sheet_name sheet of the google_sheet_file_id spreadsheet.
+- Is important to set desired 'type' as used in other connectors: fb_campaigns, fb_campaigns_stats, fb_campaigns_actions, ga_campaigns, ga_campaigns_stats, ga_campaigns_goals and mailchimp_campaigns, gw_query, gw_page, gw_query_and_page, gw_query_page_country_and_device.
+
+
+### Mysql
+
+0. See FB_Campaigns, GA_Campaigns, Mailchimp_Campaigns and GW_SearchAnalytics connector setup first.
+
+1. You should have mysql server database with its user and password.
+
+2. Change mysql.csv with your mysql "host", "port", "database", "username" and "password"
+- Upon succesful execution, CSV input data should be replaced (update and insert) on "table" of your "database"
+- Is important to set desired 'type' as used in other connectors: fb_campaigns, fb_campaigns_stats, fb_campaigns_actions, ga_campaigns, ga_campaigns_stats, ga_campaigns_goals and mailchimp_campaigns, gw_query, gw_page, gw_query_and_page, gw_query_page_country_and_device.
+
+
+### Postgresql
+
+0. See FB_Campaigns, GA_Campaigns, Mailchimp_Campaigns and GW_SearchAnalytics connector setup first.
+
+1. You should have Postgresql server database with its schema, user and password.
+
+2. Change postgresql.csv with your Postgresql "host", "port", "database", "schema", "username" and "password"
+- Upon succesful execution, CSV input data should be replaced (update and insert) on "table" of your "database" and "schema"
+- Is important to set desired 'type' as used in other connectors: fb_campaigns, fb_campaigns_stats, fb_campaigns_actions, ga_campaigns, ga_campaigns_stats, ga_campaigns_goals and mailchimp_campaigns, gw_query, gw_page, gw_query_and_page, gw_query_page_country_and_device.
+
+
+### Clickhouse
+
+0. See FB_Campaigns, GA_Campaigns, Mailchimp_Campaigns and GW_SearchAnalytics connector setup first.
+
+1. You should have Clickhouse server database with its user and password.
+
+2. Change clickhouse.csv with your Clickhouse "host", "port", "database", "username" and "password"
+- Upon succesful execution, CSV input data should be seen (truncate and insert) on "table" of your "database"
+- Is important to set desired 'type' as used in other connectors: fb_campaigns, fb_campaigns_stats, fb_campaigns_actions, ga_campaigns, ga_campaigns_stats, ga_campaigns_goals and mailchimp_campaigns, gw_query, gw_page, gw_query_and_page, gw_query_page_country_and_device.
 
 
 ## About us
 - I'm [Jordi Rosell](https://twitter.com/jrosell), working at The ducks in a row. 
-- Open for collaborations. You can do [pull resquests](https://github.com/jrosell/marketing-data-connectors/pulls) or [open issues](https://github.com/jrosell/marketing-data-connectors/issues) if you want to help.
-- Hire me at https://www.thediar.com/en/ if you need any enterprise support or if you want to sponsor us, [here is our paypal](https://www.paypal.me/thediar)
+- Disclaimer: Provided "AS IS". Hire me at https://www.thediar.com/en/ if you need enterprise support or a professional ETL service.
+- Open for collaborations. Please, [open an issue](https://github.com/jrosell/marketing-data-connectors/issues) if you need help or if you want to suggest improvements or new features.

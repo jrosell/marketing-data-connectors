@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<mapping>
+	<dbms product="TERADATA" id="teradata_id" label="Mapping Teradata" default="true">
+		<dbTypes>
+			<dbType type="BFILE" ignoreLen="true" ignorePre="true" />
+			<dbType type="BLOB" ignoreLen="true" ignorePre="true" />
+			<dbType type="BIGINT" ignoreLen="true" ignorePre="true" />
+			<dbType type="BYTEINT" ignoreLen="true" ignorePre="true" />
+			<dbType type="BYTE" ignoreLen="true" ignorePre="true" />
+			<dbType type="CHAR" defaultLength="50" ignorePre="true"/>
+			<dbType type="CHARACTER" defaultLength="50" ignorePre="true"/>
+			<dbType type="CLOB" ignoreLen="true" ignorePre="true" />
+			<dbType type="DATE" ignoreLen="true" ignorePre="true" />
+			<dbType type="DEC" defaultLength="20" defaultPrecision="10"/>
+			<dbType type="DECIMAL" defaultLength="20" defaultPrecision="10"/>
+			<dbType type="FLOAT" ignorePre="true" />
+			<dbType type="I" ignoreLen="true" ignorePre="true" />
+			<dbType type="AT" ignoreLen="true" ignorePre="true" />
+			<dbType type="BF" ignoreLen="true" ignorePre="true" />
+			<dbType type="BO" ignoreLen="true" ignorePre="true" />
+			<dbType type="BV" ignoreLen="true" ignorePre="true" />
+			<dbType type="CF" ignoreLen="true" ignorePre="true" />
+			<dbType type="CO" ignoreLen="true" ignorePre="true" />
+			<dbType type="CV" ignoreLen="true" ignorePre="true" />
+			<dbType type="D" ignoreLen="true" ignorePre="true" />
+			<dbType type="DA" ignoreLen="true" ignorePre="true" />
+			<dbType type="F" ignoreLen="true" ignorePre="true" />
+			<dbType type="GF" ignoreLen="true" ignorePre="true" />
+			<dbType type="GV" ignoreLen="true" ignorePre="true" />
+			<dbType type="I1" ignoreLen="true" ignorePre="true" />
+			<dbType type="I2" ignoreLen="true" ignorePre="true" />
+			<dbType type="TS" ignoreLen="true" ignorePre="true" />
+			<dbType type="TZ" ignoreLen="true" ignorePre="true" />
+			<dbType type="LONG VARCHAR" ignoreLen="true" ignorePre="true" />
+			<dbType type="NUMERIC" defaultLength="20" defaultPrecision="10"/>
+			<dbType type="REAL" ignoreLen="true" ignorePre="true"/>
+			<dbType type="TIME" ignoreLen="true" ignorePre="true" />
+			<dbType type="TIMESTAMP" ignoreLen="true" ignorePre="true" />
+			<dbType type="SMALLINT" ignoreLen="true" ignorePre="true" />
+			<dbType type="INTEGER" ignoreLen="true" ignorePre="true" />
+			<dbType type="LONG" ignoreLen="true" ignorePre="true" />
+			<dbType type="LONG RAW" ignoreLen="true" ignorePre="true" />
+			<dbType type="NCHAR" ignorePre="true" />
+			<dbType type="NCLOB" ignoreLen="true" ignorePre="true" />
+			<dbType type="RAW" defaultLength="300" ignorePre="true"/>
+			<dbType type="ROWID"  ignoreLen="true" ignorePre="true"/>
+			<dbType type="UROWID"  ignorePre="true"/>
+			<dbType type="VARCHAR" default="true" defaultLength="200" ignorePre="true"/>
+			<dbType type="VARBYTE" default="true" ignorePre="true"/>
+			<dbType type="XMLTYPE" ignoreLen="true" ignorePre="true" />
+		</dbTypes>
+
+		<language name="java">
+			<talendToDbTypes><!-- Adviced mappings  -->
+				<talendType type="id_List"/>
+			
+				<talendType type="id_Boolean">	
+				
+					<dbType type="BYTEINT" default="true"/>
+					
+				</talendType>
+				<talendType type="id_Byte">
+					<dbType type="BF"/>
+					<dbType type="BYTEINT" default="true"/>
+					<dbType type="BYTE"/>
+				</talendType>
+				<talendType type="id_byte[]">
+					<dbType type="BF"/>
+					<dbType type="VARBYTE" default="true"/>
+				</talendType>
+				<talendType type="id_Character">
+					<dbType type="BYTE" />
+					<dbType type="CHAR" default="true"/>
+					<dbType type="CHARACTER"/>
+					<dbType type="VARCHAR"/>
+					<dbType type="NCHAR"/>
+					<dbType type="CV"/>
+					<dbType type="LONG VARCHAR"/>
+				</talendType>
+				<talendType type="id_Date">
+					<dbType type="TIMESTAMP" default="true" />
+					<dbType type="DA"/>
+					<dbType type="DATE"/>
+					<dbType type="TIME"/>					
+				</talendType>
+				<talendType type="id_BigDecimal">
+					<dbType type="DECIMAL" default="true" />
+					<dbType type="FLOAT" />
+					<dbType type="D"/>
+					<dbType type="DEC"/>
+					<dbType type="NUMERIC"/>
+				</talendType>
+				<talendType type="id_Double">
+					<dbType type="DECIMAL"/>
+					<dbType type="FLOAT" default="true"/>
+					<dbType type="REAL"/>
+				</talendType>
+				<talendType type="id_Float">
+					<dbType type="FLOAT"/>
+					<dbType type="DECIMAL" default="true" />
+					<dbType type="DEC"/>
+					<dbType type="NUMERIC"/>
+					<dbType type="F"  />
+				</talendType>
+				<talendType type="id_Integer">
+					<dbType type="INTEGER" default="true" />
+					<dbType type="I" />
+					<dbType type="SMALLINT"/>
+				</talendType>
+				<talendType type="id_Long">
+					<dbType type="INTEGER"/>
+					<dbType type="BIGINT" default="true"/>
+				</talendType>
+				<talendType type="id_Object">
+					<dbType type="BLOB" default="true"/>
+					<dbType type="CLOB"/>
+					<dbType type="NCLOB"/>
+					<dbType type="BFILE"/>
+					<dbType type="UROWID"/>
+					<dbType type="XMLTYPE"/>
+					<dbType type="RAW"/>
+					<dbType type="LONG RAW"/>
+					<dbType type="ROWID"/>
+					<dbType type="AT"/>
+					<dbType type="BF"/>
+					<dbType type="BO"/>
+					<dbType type="BV"/>
+					<dbType type="CO"/>
+					<dbType type="I1"/>
+					<dbType type="I2"/>
+					<dbType type="TS"/>
+					<dbType type="TZ"/>
+					<dbType type="GF"/>
+					<dbType type="GV"/>
+				</talendType>
+				<talendType type="id_Short">
+					<dbType type="SMALLINT" default="true" />
+					<dbType type="INTEGER"/>
+				</talendType>
+				<talendType type="id_String">
+					<dbType type="VARCHAR" default="true" />
+					<dbType type="LONG VARCHAR"/>
+					<dbType type="CHAR" />
+					<dbType type="CHARACTER"/>
+					<dbType type="NCHAR" />
+					<dbType type="CF"  />
+				</talendType>
+			</talendToDbTypes>
+			<dbToTalendTypes><!-- Adviced mappings  -->
+				<dbType type="BFILE">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="BLOB">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="BIGINT">
+					<talendType type="id_Long" default="true"/>
+					<talendType type="id_Integer"/>
+				</dbType>
+				<dbType type="BYTEINT">
+					<talendType type="id_Byte" default="true" />
+				</dbType>
+				<dbType type="BYTE">
+					<talendType type="id_Character" default="true" />
+					<talendType type="id_Byte" />
+				</dbType>
+				<dbType type="CLOB">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="TIMESTAMP">
+					<talendType type="id_Date" default="true" />
+				</dbType>
+				<dbType type="TIME">
+					<talendType type="id_Date" default="true" />
+				</dbType>
+				<dbType type="DATE">
+					<talendType type="id_Date" default="true" />
+				</dbType>
+				<dbType type="AT">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="DECIMAL">
+					<talendType type="id_BigDecimal" default="true" />
+					<talendType type="id_Float"/>
+					<talendType type="id_Double"/>
+				</dbType>
+				<dbType type="DEC">
+					<talendType type="id_BigDecimal" default="true" />				
+				</dbType>
+				<dbType type="NUMERIC">
+					<talendType type="id_BigDecimal" default="true" />				
+				</dbType>
+				<dbType type="FLOAT">
+					<talendType type="id_Double" default="true" />
+					<talendType type="id_Float"/>
+					<talendType type="id_BigDecimal"/>
+				</dbType>
+				<dbType type="REAL">
+					<talendType type="id_Double" default="true" />				
+				</dbType>
+				<dbType type="LONG VARCHAR">
+					<talendType type="id_String" default="true" />
+				</dbType>
+				<dbType type="CHARACTER">
+					<talendType type="id_String" default="true" />
+				</dbType>
+				<dbType type="I">
+					<talendType type="id_Long"/>
+					<talendType type="id_Integer" default="true"/>
+					<talendType type="id_Short"/>
+					<talendType type="id_Float" />
+					<talendType type="id_Double"/>
+				</dbType>
+				<dbType type="BF">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="BO">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="BV">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="CF">
+					<talendType type="id_String" default="true" />
+				</dbType>
+				<dbType type="CO">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="CV">
+					<talendType type="id_String" default="true" />
+				</dbType>
+				<dbType type="D">
+					<talendType type="id_Float" default="true" />
+					<talendType type="id_Double"/>
+					<talendType type="id_BigDecimal"/>	
+				</dbType>
+				<dbType type="DA">
+					<talendType type="id_Date" default="true" />
+				</dbType>
+				<dbType type="F">
+					<talendType type="id_Float" default="true" />
+					<talendType type="id_Double"/>				
+					<talendType type="id_BigDecimal"/>	
+				</dbType>
+				<dbType type="GF">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="BF">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="GV">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="I1">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="I2">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="TS">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="TZ">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="SMALLINT">
+					<talendType type="id_Short" default="true"/>
+					<talendType type="id_Integer"/>
+				</dbType>
+				<dbType type="INTEGER">
+					<talendType type="id_Long"/>
+					<talendType type="id_Integer" default="true"/>
+					<talendType type="id_Short"/>
+					<talendType type="id_Float" />
+					<talendType type="id_Double"/>
+				</dbType>
+				<dbType type="LONG">
+					<talendType type="id_Long" default="true" />
+					<talendType type="id_Integer"/>
+					<talendType type="id_Short"/>
+				</dbType>
+				<dbType type="LONG RAW">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="NCHAR">
+					<talendType type="id_String" default="true" />
+				</dbType>
+				<dbType type="CHAR">
+					<talendType type="id_String" default="true" />
+				</dbType>
+				<dbType type="NCLOB">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="RAW">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="ROWID">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="UROWID">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="VARCHAR">
+					<talendType type="id_String" default="true" />
+				</dbType>
+				<dbType type="VARBYTE">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+				<dbType type="XMLTYPE">
+					<talendType type="id_Object" default="true" />
+				</dbType>
+			</dbToTalendTypes>
+		</language>
+	</dbms>
+
+</mapping>
